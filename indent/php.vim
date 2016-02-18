@@ -87,6 +87,13 @@ function GetPhpIndent()
 	if cline =~ '^\s*[\]]' " // Fix from Holger Dzeik <dzeik@nentec.de> Thanks!
 		let ind = ind - &sw
     endif
+    if line =~ '{' && line !~ '{'
+		let ind = ind + &sw
+	endif
+	if cline =~ '^\s*[\}]' " // Fix from Holger Dzeik <dzeik@nentec.de> Thanks!
+		let ind = ind - &sw
+    endif
+
 
 
 	if exists("b:php_noindent_switch") " version 1 behavior, diy switch/case,etc
