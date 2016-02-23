@@ -200,6 +200,7 @@ call <SID>HtmlIndentPush('u')
 call <SID>HtmlIndentPush('ul')
 call <SID>HtmlIndentPush('var')
 call <SID>HtmlIndentPush('section')
+call <SID>HtmlIndentPush('aside')
 
 
 " [-- <ELEMENT ? O O ...> --]
